@@ -25,35 +25,15 @@
 
   <div class="container w-50">
 
-    <form method="post" action="">
+    <form method="get" action="">
 
       <!-- Adding the CSRF form security feature -->
       {{ form.hidden_tag() }}
       <fieldset>
 
         <legend class="border-bottom mt-4">
-          Get started
+          Sign in
         </legend>
-
-        <div class="form-group">
-
-          {{ form.username.label(class='form-control-label') }}
-
-          {% if form.username.errors %}
-          {{ form.username(class='form-control form-control-lg is-invalid') }}
-
-            {% for error in form.username.errors %}
-              <span>{{error}}</span>
-            {% endfor %}
-
-            {% else %}
-            {{ form.username(class='form-control form-control-lg') }}
-
-          {% endif %}
-
-          
-        </div>
-
 
         <div class="form-group">
           
@@ -74,7 +54,7 @@
           
         </div>
 
-
+        
         <div class="form-group">
           
           {{ form.password.label(class='form-control-label') }}
@@ -94,25 +74,6 @@
           
         </div>
 
-
-        <div class="form-group">
-          
-          {{ form.confirm_password.label(class='form-control-label') }}
-
-          {% if form.confirm_password.errors %}
-          {{ form.username(class='form-control form-control-lg is-invalid') }}
-
-            {% for error in form.confirm_password.errors %}
-              <span>{{error}}</span>
-            {% endfor %}
-
-            {% else %}
-            {{ form.confirm_password(class='form-control form-control-lg') }}
-
-          {% endif %}
-
-          
-        </div>
 
       </fieldset>
 
