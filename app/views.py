@@ -10,8 +10,9 @@ def index() :
   '''
 
 
-  title = 'Ignition Reads - Landing Page'
+  title = 'Ignition Reads~Landing Page'
   return render_template('index.html', title = title)
+
 
 
 
@@ -22,7 +23,7 @@ def reads() :
   '''
 
 
-  title = 'Reads - Just4Reads'
+  title = 'Reads~Just4Reads'
   return render_template('reads.html', title = title)
 
 
@@ -34,7 +35,7 @@ def musings() :
   '''
 
   
-  title = 'Musings - All reflections'
+  title = 'Musings~All reflections'
   return render_template('musings.html', title = title)
 
 
@@ -46,7 +47,7 @@ def gallery() :
   '''
 
   
-  title = 'Gallery - Memory photo dump'
+  title = 'Gallery~Memory photo dump'
   return render_template('gallery.html', title = title)
 
 
@@ -58,5 +59,16 @@ def about() :
   '''
 
   
-  title = 'About Ignition Reads'
+  title = 'About~Ignition Reads'
   return render_template('about.html', title = title)
+
+
+@app.route('/login')
+def login() :
+  '''
+  View login page function that returns the login page
+  '''
+
+  
+  title = 'Login'
+  return render_template('login.html', title = title)

@@ -1,0 +1,74 @@
+/* For h1 */
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+/* For h2 */
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+/* For links */
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap');
+
+
+/* .fluid .navbar-nav {
+  text-align: center;
+} */
+
+nav {
+  background-color: #FFBF7E;
+}
+
+.navbar-nav {
+  float:none;
+  margin:0 auto;
+  display: inline;
+  text-align: center;
+}
+
+.navbar-nav > a {
+  display: inline;
+  float:none;
+}
+
+
+a {
+  font-family: 'Scheherazade New', serif;
+  color: #000;
+  font-size: 1.5rem;
+  margin: 1em;
+}
+
+nav a:hover {
+  color: #5C4A46;
+  text-decoration: underline !important;
+}
+nav a:focus {
+  color: #5C4A46;
+  text-decoration: underline !important;
+}
+
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #FFAB55;
+  color: #000;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-device-width: 480px) {
+  /* STYLES HERE for DEVICES with physical max-screen width of 480px */
+  footer h6{
+    font-size: 0.9rem;
+  }
+
+}
