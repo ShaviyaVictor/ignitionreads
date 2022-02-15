@@ -23,6 +23,34 @@
 <body>
   
 
+
+
+
+
+
+  <!-- form for the signupForm -->
+  <div class="container w-50">
+
+    <form method="post" action="">
+
+      <!-- Adding the CSRF form security feature -->
+      {{ form.hidden_tag() }}
+      <fieldset>
+
+        <legend class="border-bottom mb-4">
+          Get started
+        </legend>
+        <div class="form-group">
+          {{ form.username.label(class='form-control-label') }}
+          {{ form.username(class='form-control form-control-lg') }}
+        </div>
+
+      </fieldset>
+
+    </form>
+
+  </div>
+
   
 </body>
 

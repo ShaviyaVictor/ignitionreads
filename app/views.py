@@ -1,5 +1,6 @@
 from flask import render_template
 from app import app
+from app.forms import RegistrationForm, LoginForm
 
 
 # Views
@@ -71,6 +72,7 @@ def login() :
 
   
   title = 'Login'
+  form = RegistrationForm()
   return render_template('login.html', title = title)
 
 
