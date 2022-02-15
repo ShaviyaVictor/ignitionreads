@@ -10,7 +10,7 @@ def index() :
   '''
 
 
-  title = 'Ignition Reads~Landing Page'
+  title = 'Home~Landing Page'
   return render_template('index.html', title = title)
 
 
@@ -72,3 +72,15 @@ def login() :
   
   title = 'Login'
   return render_template('login.html', title = title)
+
+
+
+@app.route('/signup')
+def signup() :
+  '''
+  View signup page function that returns the signup page
+  '''
+
+  
+  title = 'Register'
+  return render_template('signup.html', title = title)
