@@ -10,6 +10,7 @@ def index() :
   View root page function that returns the index page and its data
   '''
 
+
   title = 'Ignition Reads - Landing Page'
   return render_template('index.html', title = title)
 
@@ -22,7 +23,8 @@ def reads() :
   '''
 
 
-  return render_template('reads.html')
+  title = 'Reads - Just4Reads'
+  return render_template('reads.html', title = title)
 
 
 
@@ -33,7 +35,8 @@ def musings() :
   '''
 
   
-  return render_template('musings.html')
+  title = 'Musings - All reflections'
+  return render_template('musings.html', title = title)
 
 
 
@@ -44,7 +47,8 @@ def gallery() :
   '''
 
   
-  return render_template('gallery.html')
+  title = 'Gallery - Memory photo dump'
+  return render_template('gallery.html', title = title)
 
 
 
@@ -55,4 +59,5 @@ def about() :
   '''
 
   
-  return render_template('about.html')
+  title = 'About Ignition Reads'
+  return render_template('about.html', title = title)
