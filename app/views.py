@@ -1,5 +1,5 @@
 from crypt import methods
-from flask import render_template
+from flask import render_template, url_for, redirect
 from app import app
 from app.forms import RegistrationForm, LoginForm
 
@@ -74,6 +74,10 @@ def login() :
   
   title = 'Login'
   form = RegistrationForm()
+
+  if form.validate_on_submit():
+    return redirect(url_for('reads'))
+
   return render_template('login.html', title = title, form = form)
 
 
