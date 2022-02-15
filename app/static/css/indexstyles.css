@@ -42,6 +42,12 @@ h2 {
   float:none;
 }
 
+button .navbar-toggler-icon {
+  color: #fff;
+}
+
+
+
 
 
 
@@ -58,6 +64,27 @@ footer {
   padding: 0.5rem;
 }
 
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-device-width: 480px) {
+  /* STYLES HERE for DEVICES with physical max-screen width of 480px */
+  h1 {
+    font-size: 3.5rem;
+    margin: 5%;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+
+}
 
 
 
