@@ -1,5 +1,10 @@
+/* For h1 */
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+/* For h2 */
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+/* For links */
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap');
+
 
 
 
@@ -7,6 +12,7 @@ h1 {
   font-family: 'ABeeZee', sans-serif;
   font-size: 4.5rem;
   margin: 5%;
+  margin-top: 2em;
 }
 body {
   margin: 0px;
@@ -22,6 +28,7 @@ body {
 h2 {
   font-family: 'Poiret One', cursive;
   font-size: 2.5rem;
+  margin: 2em;
 }
 
 
@@ -42,15 +49,18 @@ h2 {
   float:none;
 }
 
-button .navbar-toggler-icon {
-  color: #fff;
+
+a {
+  font-family: 'Scheherazade New', serif;
+  color: #F2F2F2;
+  font-size: 1.5rem;
+  margin: 1em;
 }
 
-
-
-
-
-
+a:hover {
+  color: #F07427;
+  text-decoration: underline !important;
+}
 
 
 footer {
@@ -79,9 +89,14 @@ footer {
   h1 {
     font-size: 3.5rem;
     margin: 5%;
+    margin-top: 30%;
   }
   h2 {
     font-size: 1.8rem;
+    margin: 6%;
+  }
+  footer h6{
+    font-size: 0.9rem;
   }
 
 }
