@@ -30,13 +30,18 @@ h2 {
 }
 
 
-/* .navbar-nav a{
-  float: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
+.navbar-nav {
+  float:none;
+  margin:0 auto;
+  display: inline;
+  text-align: center;
+}
+
+.navbar-nav > a {
+  display: inline;
+  float:none;
+}
+
 
 
 
