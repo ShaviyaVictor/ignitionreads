@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+
+
+h1 {
+  font-family: 'ABeeZee', sans-serif;
+  font-size: 4.5rem;
+  margin: 5%;
+}
+body {
+  margin: 0px;
+  color: #F2F2F2;
+  text-align: center;
+  background-color: #171111;
+  background-image: url('../images/ignitionreads.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h2 {
+  font-family: 'Poiret One', cursive;
+  font-size: 2.5rem;
+}
+
+
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
