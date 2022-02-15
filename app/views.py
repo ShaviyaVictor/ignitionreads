@@ -1,3 +1,4 @@
+from crypt import methods
 from flask import render_template
 from app import app
 from app.forms import RegistrationForm, LoginForm
@@ -64,7 +65,7 @@ def about() :
   return render_template('about.html', title = title)
 
 
-@app.route('/login')
+@app.route('/login', methods=['post', 'get'])
 def login() :
   '''
   View login page function that returns the login page
@@ -73,7 +74,7 @@ def login() :
   
   title = 'Login'
   form = RegistrationForm()
-  return render_template('login.html', title = title)
+  return render_template('login.html', title = title, form = form)
 
 
 

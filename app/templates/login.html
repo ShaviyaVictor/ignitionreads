@@ -42,10 +42,27 @@
         </legend>
         <div class="form-group">
           {{ form.username.label(class='form-control-label') }}
-          {{ form.username(class='form-control form-control-lg') }}
+
+          {% if form.username.errors %}
+            {{ form.username(class='form-control form-control-lg is-invalid') }}
+            
+              {% for error in form.username.errors %}
+              <span>error</span>
+              { %endfor% }
+
+              {% else %}
+              {{ form.username(class='form-control form-control-lg') }}
+
+          { %endif% }
+
+          
         </div>
 
       </fieldset>
+
+      <div class="field-group">
+        {{ form.submit(class='btn btn-primary') }}
+      </div>
 
     </form>
 

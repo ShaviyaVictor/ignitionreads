@@ -1,1 +1,0 @@
-SECCRET_KEY='shashaviya'
