@@ -73,7 +73,7 @@ def login() :
 
   
   title = 'Login'
-  form = RegistrationForm()
+  form = LoginForm()
 
   if form.validate_on_submit():
     return redirect(url_for('reads'))
@@ -90,4 +90,9 @@ def signup() :
 
   
   title = 'Register'
+  form = RegistrationForm()
+
+  if form.validate_on_submit():
+    return redirect(url_for('reads'))
+
   return render_template('signup.html', title = title)

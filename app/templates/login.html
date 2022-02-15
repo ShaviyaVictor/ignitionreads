@@ -23,12 +23,6 @@
 <body>
   
 
-
-
-
-
-
-  <!-- form for the signupForm -->
   <div class="container w-50">
 
     <form method="post" action="">
@@ -49,7 +43,7 @@
           {{ form.username(class='form-control form-control-lg is-invalid') }}
 
             {% for error in form.username.errors %}
-              <span>Error!</span>
+              <span>{{error}}</span>
             {% endfor %}
 
             {% else %}
@@ -69,7 +63,7 @@
           {{ form.email(class='form-control form-control-lg is-invalid') }}
 
             {% for error in form.email.errors %}
-              <span>Error!</span>
+              <span>{{error}}</span>
             {% endfor %}
 
             {% else %}
@@ -89,7 +83,7 @@
           {{ form.password(class='form-control form-control-lg is-invalid') }}
 
             {% for error in form.password.errors %}
-              <span>Error!</span>
+              <span>{{error}}</span>
             {% endfor %}
 
             {% else %}
@@ -109,7 +103,7 @@
           {{ form.username(class='form-control form-control-lg is-invalid') }}
 
             {% for error in form.confirm_password.errors %}
-              <span>Error!</span>
+              <span>{{error}}</span>
             {% endfor %}
 
             {% else %}
