@@ -1,5 +1,5 @@
 from crypt import methods
-from flask import render_template, url_for, redirect
+from flask import render_template, url_for, redirect, flash
 from app import app
 from app.forms import RegistrationForm, LoginForm
 
@@ -77,11 +77,14 @@ def login() :
 
   if form.validate_on_submit():
     
-    if form.email.data=='shaviya@gmail.com' and form.password.data=='123456789' :
+    if form.email.data=='shaviyavictor@gmail.com' and form.password.data=='123456789' :
+
+      flash(f'Login successful for {form.email.data}', category='success')
+
       return redirect(url_for('reads'))
 
     else :
-      return redirect(url_for('index'))
+      flash(f'Login unsuccessful for {form.email.data}', category='danger')
 
   return render_template('login.html', title = title, form = form)
 
@@ -98,6 +101,9 @@ def signup() :
   form = RegistrationForm()
 
   if form.validate_on_submit():
-    return redirect(url_for('index'))
+
+    flash(f'Account created successful for {form.username.data}', category='success')
+
+    return redirect(url_for('login'))
 
   return render_template('signup.html', title = title, form = form)
