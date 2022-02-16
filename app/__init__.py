@@ -8,6 +8,8 @@ from flask_sqlalchemy import SQLAlchemy
 # Initializing our app
 app = Flask(__name__)
 
+db = SQLAlchemy(app)
+
 
 
 
@@ -17,6 +19,8 @@ app.config.from_object(DevConfig)
 app.config['SECRET_KEY']='shashaviya'
 
 app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///database/reads.db'
+
+
 
 
 from app import views
