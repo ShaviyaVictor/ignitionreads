@@ -1,7 +1,8 @@
-from crypt import methods
+# from crypt import methods
 from flask import render_template, url_for, redirect, flash
-from app import app
+from app import app, db
 from app.forms import RegistrationForm, LoginForm
+from app.models import User
 
 
 # Views
@@ -101,6 +102,8 @@ def signup() :
   form = RegistrationForm()
 
   if form.validate_on_submit():
+
+    user = User(username=form.username.data, email=form.email.data, password=form.password.data)
 
     flash(f'Account created successful for {form.username.data}', category='success')
 
