@@ -18,7 +18,12 @@ app.config.from_object(DevConfig)
 
 app.config['SECRET_KEY']='shashaviya'
 
-app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///database/reads.db'
+# db configuration for SQLAlchemy sqlite
+# app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///database/reads.db'
+
+
+# db configuration for SQLAlchemy postgresql 
+app.config['SQLALCHEMY_DATABASE_URI']='postgresql://username:password@hostname:port/databasename'
 
 
 
