@@ -40,7 +40,7 @@
           {% if form.username.errors %}
           {{ form.username(class='form-control form-control-lg is-invalid') }}
 
-            {% for error in form.username.errors %}
+            {% for error in form.username.sou errors %}
               <span>{{error}}</span>
             {% endfor %}
 
