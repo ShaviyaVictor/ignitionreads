@@ -65,7 +65,7 @@ def about() :
   return render_template('about.html', title = title)
 
 
-@app.route('/login', methods=['post', 'get'])
+@app.route('/login', methods=['POST', 'GET'])
 def login() :
   '''
   View login page function that returns the login page
@@ -76,13 +76,18 @@ def login() :
   form = LoginForm()
 
   if form.validate_on_submit():
-    return redirect(url_for('reads'))
+    
+    if form.email.data=='shaviyavictor@gmail.com' and form.password.data=='12345678' :
+      return redirect(url_for('reads'))
+
+    else :
+      return redirect(url_for('index'))
 
   return render_template('login.html', title = title, form = form)
 
 
 
-@app.route('/signup')
+@app.route('/signup', methods=['POST', 'GET'])
 def signup() :
   '''
   View signup page function that returns the signup page
@@ -93,6 +98,6 @@ def signup() :
   form = RegistrationForm()
 
   if form.validate_on_submit():
-    return redirect(url_for('reads'))
+    return redirect(url_for('login'))
 
-  return render_template('signup.html', title = title)
+  return render_template('signup.html', title = title, form = form)
