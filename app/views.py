@@ -79,7 +79,7 @@ def login() :
     
     if form.email.data=='shaviyavictor@gmail.com' and form.password.data=='123456789' :
 
-      flash(f'Login successful for {form.email.data}', category='success')
+      flash(f'Logged in successful as {form.email.data}', category='success')
 
       return redirect(url_for('reads'))
 
