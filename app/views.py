@@ -104,6 +104,8 @@ def signup() :
   if form.validate_on_submit():
 
     user = User(username=form.username.data, email=form.email.data, password=form.password.data)
+    db.session.add(user)
+    db.session.commit()
 
     flash(f'Account created successful for {form.username.data}', category='success')
 
