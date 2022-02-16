@@ -1,4 +1,5 @@
 # from crypt import methods
+import email
 from flask import render_template, url_for, redirect, flash
 from app import app, db
 from app.forms import RegistrationForm, LoginForm
@@ -77,8 +78,10 @@ def login() :
   form = LoginForm()
 
   if form.validate_on_submit():
+
+    user = User.query.filter_by(email=form.email.data).first()
     
-    if form.email.data=='shaviyavictor@gmail.com' and form.password.data=='123456789' :
+    if form.email.data==user.email and form.password.data==user.password :
 
       flash(f'Logged in successful as {form.email.data}', category='success')
 
