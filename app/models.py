@@ -13,3 +13,7 @@ class User(db.Model) :
   image_file = db.Column(db.String(20), nullable=False, default='default.jpg')
   password = db.Column(db.String(20), nullable=False)
   date_created = db.Column(db.DateTime, default=datetime.utcnow)
+
+
+  def __repr__(self) :
+      return f'{self.username} : {self.email} : {self.date_created}'
