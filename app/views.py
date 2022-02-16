@@ -77,7 +77,7 @@ def login() :
 
   if form.validate_on_submit():
     
-    if form.email.data=='shaviyavictor@gmail.com' and form.password.data=='12345678' :
+    if form.email.data=='shaviya@gmail.com' and form.password.data=='123456789' :
       return redirect(url_for('reads'))
 
     else :
@@ -98,6 +98,6 @@ def signup() :
   form = RegistrationForm()
 
   if form.validate_on_submit():
-    return redirect(url_for('login'))
+    return redirect(url_for('index'))
 
   return render_template('signup.html', title = title, form = form)
