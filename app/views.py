@@ -95,7 +95,7 @@ def login() :
 
     user = User.query.filter_by(email=form.email.data).first()
     
-    if form.email.data==user.email and form.password.data==user.password :
+    if user and form.password.data==user.password :
 
       flash(f'Logged in successful as {form.email.data}', category='success')
 
