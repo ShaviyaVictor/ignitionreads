@@ -21,7 +21,29 @@
 </head>
 <body>
   
-{{ data }}
+
+  <div class="container">
+
+    <div class="card">
+      <div class="card-header">
+        Random Quote No.{{ data.id }}
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>{{ data.quote }</p>
+          <footer class="blockquote-footer">Quote by <cite title="Source Title">{{ data.author }}</cite></footer>
+          <a href="{{ data.permalink }}" class="btn btn-primary">Check it out</a>
+        </blockquote>
+      </div>
+    </div>
+
+    {{ data.quote }}
+
+  </div>
+
+
+
+
   
 </body>
 
