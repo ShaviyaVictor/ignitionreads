@@ -16,4 +16,4 @@ class User(db.Model) :
 
 
   def __repr__(self) :
-      return f'{self.username} : {self.email} : {self.date_created}'
+      return f'{self.username} : {self.email} : {self.date_created.strftime("%d/%m/%Y, %H:%M:%S")}'
