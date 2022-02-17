@@ -23,7 +23,7 @@ app.config['SECRET_KEY']='shashaviya'
 
 
 # db configuration for SQLAlchemy postgresql 
-app.config['SQLALCHEMY_DATABASE_URI']='postgresql://username:password@hostname:port/databasename'
+app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:Access@localhost/ignition'
 
 
 
