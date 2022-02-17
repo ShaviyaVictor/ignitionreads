@@ -33,7 +33,9 @@ def reads() :
   title = 'Reads~Just4Reads'
 
   req = requests.get('http://quotes.stormconsultancy.co.uk/random.json')
-  data = json.loads(req.content)
+  obj = json.loads(req.content)
+  listed = list(obj.items())
+  data = listed
 
   # json_data = json.loads(data)
 
