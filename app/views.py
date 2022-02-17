@@ -7,7 +7,7 @@ from app.models import User
 
 
 # Views
-@app.route('/')
+@app.route('/', methods=['GET'])
 def index() :
   '''
   View root page function that returns the index page and its data

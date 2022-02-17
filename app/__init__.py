@@ -1,6 +1,7 @@
 from flask import Flask
 from .config import DevConfig
 from flask_sqlalchemy import SQLAlchemy
+import requests
 
 
 
@@ -10,7 +11,7 @@ app = Flask(__name__)
 
 db = SQLAlchemy(app)
 
-
+req = requests.get('http://quotes.stormconsultancy.co.uk/random.json')
 
 
 # Setting up the configuration
