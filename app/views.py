@@ -4,10 +4,12 @@ from flask import render_template, url_for, redirect, flash
 from app import app, db
 from app.forms import RegistrationForm, LoginForm
 from app.models import User
+import requests
+
 
 
 # Views
-@app.route('/', methods=['GET'])
+@app.route('/')
 def index() :
   '''
   View root page function that returns the index page and its data
@@ -20,7 +22,7 @@ def index() :
 
 
 
-@app.route('/reads')
+@app.route('/reads', methods=['GET'])
 def reads() :
   '''
   View reads page function that returns the reads page
@@ -28,7 +30,10 @@ def reads() :
 
 
   title = 'Reads~Just4Reads'
-  return render_template('reads.html', title = title)
+  req = requests.get('http://quotes.stormconsultancy.co.uk/random.json')
+
+
+  return render_template('reads.html', title = title, req=req)
 
 
 
