@@ -5,6 +5,7 @@ from app import app, db
 from app.forms import RegistrationForm, LoginForm
 from app.models import User
 import requests
+import json
 
 
 
@@ -30,10 +31,12 @@ def reads() :
 
 
   title = 'Reads~Just4Reads'
+
   req = requests.get('http://quotes.stormconsultancy.co.uk/random.json')
+  data = req.content
 
 
-  return render_template('reads.html', title = title, req=req)
+  return render_template('reads.html', title = title, data = data)
 
 
 
