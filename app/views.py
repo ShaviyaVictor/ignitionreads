@@ -88,6 +88,8 @@ def login() :
   View login page function that returns the login page
   '''
 
+  if current_user.is_authenticated :
+    return redirect(url_for('index'))
   
   title = 'Login'
   form = LoginForm()
