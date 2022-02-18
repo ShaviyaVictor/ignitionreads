@@ -6,8 +6,7 @@ from app.forms import RegistrationForm, LoginForm
 from app.models import User
 import requests
 import json
-from flask_login import login_user, logout_user,  current_user
-
+from flask_login import login_user, logout_user,  current_user, login_required
 
 
 # Views
@@ -25,6 +24,7 @@ def index() :
 
 
 @app.route('/reads', methods=['GET'])
+@login_required
 def reads() :
   '''
   View reads page function that returns the reads page
@@ -48,6 +48,7 @@ def reads() :
 
 
 @app.route('/musings')
+
 def musings() :
   '''
   View musings page function that returns the musings page
