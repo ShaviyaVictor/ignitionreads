@@ -6,6 +6,7 @@ from app.forms import RegistrationForm, LoginForm
 from app.models import User
 import requests
 import json
+from flask_login import login_user, logout_user,  current_user
 
 
 
@@ -97,6 +98,8 @@ def login() :
     
     if user and bcrypt.check_password_hash(user.password, form.password.data) :
 
+      login_user(user)
+
       flash(f'Logged in successful as {form.email.data}', category='success')
 
       return redirect(url_for('reads'))
@@ -105,6 +108,13 @@ def login() :
       flash(f'Login unsuccessful for {form.email.data}', category='danger')
 
   return render_template('login.html', title = title, form = form)
+
+
+@app.route('/logout')
+def logout() :
+  logout_user()
+
+  return redirect(url_for('login'))
 
 
 
