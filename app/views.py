@@ -120,6 +120,9 @@ def signup() :
 
   if form.validate_on_submit():
 
+    #password hashing
+    
+
     user = User(username=form.username.data, email=form.email.data, password=form.password.data)
     db.session.add(user)
     db.session.commit()
