@@ -48,7 +48,7 @@ def reads() :
 
 
 @app.route('/musings')
-
+@login_required
 def musings() :
   '''
   View musings page function that returns the musings page
@@ -61,6 +61,7 @@ def musings() :
 
 
 @app.route('/gallery')
+@login_required
 def gallery() :
   '''
   View gallery page function that returns the gallery page

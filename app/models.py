@@ -1,6 +1,7 @@
 # import email
 
 # from click import password_option
+from flask import redirect, url_for
 from app import db, login_manager
 from datetime import datetime
 from flask_login import UserMixin
@@ -14,7 +15,7 @@ def load_user(user_id):
 
 @login_manager.unauthorized_handler
 def unauthorized():
-    return f'Unauthorised Access. Please register to gain access to this page'
+    return redirect(url_for('signup'))
 
 
 class User(db.Model, UserMixin) :
