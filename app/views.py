@@ -1,7 +1,7 @@
 # from crypt import methods
 import email
 from flask import render_template, url_for, redirect, flash
-from app import app, db
+from app import app, db, bcrypt
 from app.forms import RegistrationForm, LoginForm
 from app.models import User
 import requests
@@ -121,7 +121,7 @@ def signup() :
   if form.validate_on_submit():
 
     #password hashing
-    
+    encrypted_password = bcrypt.generate_password_hash(form.password.data)
 
     user = User(username=form.username.data, email=form.email.data, password=form.password.data)
     db.session.add(user)
