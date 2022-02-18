@@ -126,6 +126,9 @@ def signup() :
   View signup page function that returns the signup page
   '''
 
+  if current_user.is_authenticated :
+    return redirect(url_for('index'))
+  
   
   title = 'Register'
   form = RegistrationForm()
