@@ -95,7 +95,7 @@ def login() :
 
     user = User.query.filter_by(email=form.email.data).first()
     
-    if user and form.password.data==user.password :
+    if user and bcrypt.check_password_hash(user.password, form.password.data) :
 
       flash(f'Logged in successful as {form.email.data}', category='success')
 
