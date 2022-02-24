@@ -30,10 +30,7 @@ To run unittest for the application:
   > `$ python3 manager.py test`
 
 ## Technologies Used
-- Python 3.8.10
-- Flask 2.0.2
-- Werkzeug 2.0.2
-- Postgresql
+All installations are conatined in the following [file](https://github.com/ShaviyaVictor/ignitionreads/blob/main/requirements.txt)
 
 ## Contact Information
 **Email:** [shaviyavictor@gmail.com](#)
