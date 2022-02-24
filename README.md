@@ -1,7 +1,7 @@
 # ignitionreads App
 
 This project was generated with [Python's Virtual CLI Environment](#) version 3.8.10     
-![ignitionreads_Screenshot](#)
+![ignitionreads_Screenshot](https://github.com/ShaviyaVictor/ignitionreads/blob/main/app/static/images/Screenshot-1.png)
 
 #### Author
 **Victor Shaviya**    
