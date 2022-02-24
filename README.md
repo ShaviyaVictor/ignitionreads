@@ -12,7 +12,7 @@ This project is all about building *A personal blogging website where I can crea
 
 #### Live link to site
 The project was deployed to Heroku and GitHub pages for publication.     
-To view the [project's Heroku live site](#).
+To view the [project's Heroku live site](#).     
 To view the [project's Figma mockup design](https://www.figma.com/file/cCM2lg4KTphSJ0oK3VwEqM/Ignition-Reads-Blog?node-id=5%3A16).
 
 ## Application Setup Instructions
